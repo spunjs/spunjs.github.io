@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[@]}))
+
+cd $DIR
+
+while "$(inotifywait -qr -e MODIFY --exclude '.*.swp' $DIR)";do
+  gulp
+done

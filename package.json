@@ -1,0 +1,20 @@
+{
+  "name": "spunjs.github.io",
+  "description": "Rapid selenium spec authoring.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spunjs/spunjs.github.io.git"
+  },
+  "author": "Joseph Spencer",
+  "bugs": {
+    "url": "https://github.com/spunjs/spunjs.github.io/issues"
+  },
+  "homepage": "https://github.com/spunjs/spunjs.github.io",
+  "devDependencies": {
+    "gulp-jade": "~0.6.1"
+  },
+  "dependencies": {
+    "gulp-changed": "~0.4.0",
+    "run-sequence": "~0.3.6"
+  }
+}

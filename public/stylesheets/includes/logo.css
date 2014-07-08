@@ -1,0 +1,24 @@
+img.logo {
+  height: 250px;
+  margin-top: 25px;
+  width: 250px;
+}
+
+/*
+.spinning-logo {
+  height: 250px;
+  width: 250px;
+}
+
+.spinning-logo img.record {
+  height: auto;
+  width: 250px;
+  -webkit-animation: rotating 20s linear infinite;
+}
+
+.spinning-logo img.partial {
+  -webkit-animation: rotating 3s linear infinite;
+  position: relative;
+  top: -250px;
+}
+*/

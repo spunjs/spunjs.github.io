@@ -2,6 +2,7 @@ var jade = require('gulp-jade');
 var changed = require('gulp-changed')('./dist/');
 var gulp = require('gulp');
 var sequence = require('run-sequence');
+var rework = require('gulp-rework');
 
 gulp.task('jade', function(){
   gulp.src('./public/pages/**/*.jade')
@@ -18,14 +19,16 @@ gulp.task('images', function(){
 
 gulp.task('css', function(){
   var dest = './dist/stylesheets/';
-
-  [
-    './public/stylesheets/**/*',
-    './public/lib/pure/base.css'
-  ].forEach(function(glob){
-    gulp.src(glob)
-    .pipe(gulp.dest(dest));
-  });
+  gulp.src('./public/stylesheets/pages/**/*.css')
+  .pipe(rework(
+    require('rework-import')({
+      path: [
+        './public/stylesheets/pages/'
+      ]
+    })
+  ))
+  .pipe(require('gulp-csso')())
+  .pipe(gulp.dest(dest));
 });
 
 gulp.task('default', function(){

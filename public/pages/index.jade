@@ -1,9 +1,17 @@
 extends ../templates/page.jade
 
+block append head:title
+  title. spun - Rapid Selenium spec authoring
+
 block append body:content
   .centered-text
+    img(src="/images/logo.png" class="logo" alt="spun for rapid selenium spec authoring")
+    //-
+      .spinning-logo
+        img(src="/images/record-full.png", class="record full")
+        img(src="/images/record-partial.png", class="record partial")
+
     h1. Rapid Selenium spec authoring
-    img(src="/images/logo.png")
 
     .spun-example
       .line

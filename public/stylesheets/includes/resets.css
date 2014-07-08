@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #2e2e2e;
+}
+
+.centered-text {
+  text-align: center;
+}
+.centered-text > div,
+.centered-text > p {
+  margin: auto;
+  margin-top: 15px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.lead {
+  color: #bdc3c7;
+  font-size: 25px;
+  font-weight: bold;
+}

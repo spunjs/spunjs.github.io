@@ -18,5 +18,6 @@ mv dist/* .
 rm -rf dist/
 git add --all
 git commit -a -m 'Deploying'
+git push origin master
 git checkout develop
 gulp

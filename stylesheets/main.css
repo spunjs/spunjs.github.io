@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes rotating {
+  from{
+    -webkit-transform: rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.centered-text {
+  text-align: center;
+}
+.centered-text > div,
+.centered-text > p {
+  margin: auto;
+  margin-top: 15px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.spun-example {
+  background: black;
+  border-radius: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  max-width: 450px;
+  padding: 15px;
+  text-align: left;
+}
+
+.spun-example > .line > .command {
+  color: yellow;
+  margin-right: 15px;
+}
+
+.spun-example > .line > .operator {
+  color: yellow;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.spun-example > .line > .string-arg {
+  color: violet;
+}
+
+.spun-example > .line > .numeric-arg {
+  color: white;
+}
+
+img {
+  height: auto;
+  width: 250px;
+  -webkit-animation: rotating 3s ease-in-out infinite;
+}

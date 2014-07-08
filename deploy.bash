@@ -18,3 +18,5 @@ mv dist/* .
 rm -rf dist/
 git add --all
 git commit -a -m 'Deploying'
+git checkout develop
+gulp

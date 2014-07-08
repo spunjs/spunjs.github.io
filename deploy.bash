@@ -14,7 +14,7 @@ fi
 gulp
 
 git checkout master
-mv dist/* .
+cp -R dist/* .
 rm -rf dist/
 git add --all
 git commit -a -m 'Deploying'

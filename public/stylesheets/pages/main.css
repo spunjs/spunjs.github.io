@@ -2,3 +2,21 @@
 @import '../includes/resets.css';
 @import '../includes/logo.css';
 @import '../includes/examples.css';
+
+header {
+  margin-top: 20px;
+}
+
+header a {
+  color: #BDBDBD;
+  display: inline-block;
+  font-size: 20px;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+
+footer {
+  margin-bottom: 60px;
+}
+
+

@@ -5,6 +5,11 @@ block append head:title
 
 block append body:content
   .centered-text
+    header
+      a(href="https://github.com/spunjs/spun") github
+      a(href="https://github.com/spunjs/spun/issues") issues
+      a(href="https://www.npmjs.org/package/spun") npm
+
     img(src="/images/logo.png" class="logo" alt="spun for rapid selenium spec authoring")
     //-
       .spinning-logo
@@ -51,8 +56,7 @@ block append body:content
       .line
         span.command. npm install -g spun
 
-    p.
-      Once you do that you're good to go!  Here's an example on how you can run it:
+    h2. Running
 
     .spun-example
       .line
@@ -66,6 +70,10 @@ block append body:content
         span.string-arg. #run all your spun files in the given browsers
       .line
         span.command. spun --browsers=chrome,ff,ie,safari ./test/**/*.spun
+
+    h2 Resources
+
+    footer
 
     //h3. Universal
       p.

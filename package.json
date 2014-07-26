@@ -1,6 +1,7 @@
 {
   "name": "spunjs.github.io",
-  "description": "Rapid selenium spec authoring.",
+  "description": "Rapid Selenium Testing",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/spunjs/spunjs.github.io.git"

@@ -9,6 +9,7 @@ block append body:content
       a(href="https://github.com/spunjs/spun") github
       a(href="https://github.com/spunjs/spun/issues") issues
       a(href="https://www.npmjs.org/package/spun") npm
+      a(href="https://github.com/spunjs/spun/wiki") wiki
 
     img(src="/images/logo.png" class="logo" alt="spun for rapid selenium spec authoring")
     //-
@@ -17,7 +18,8 @@ block append body:content
         img(src="/images/record-partial.png", class="record partial")
 
     h1. Rapid Selenium Testing
-
+    p.
+      Here's an example spun file
     .spun-example
       .line
         span.command. get
@@ -39,6 +41,11 @@ block append body:content
         span.string-arg. text
       .line
         span.command. quit
+
+    :markdown
+      Spun files consist of commands and arguments.  Refer to the project
+      [wiki](https://github.com/spunjs/spun/wiki) for a full list of commands and
+      the arguments they take.
 
     //
       p.

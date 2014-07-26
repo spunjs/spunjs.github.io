@@ -18,5 +18,8 @@
     "gulp-rework": "~0.3.0",
     "rework-import": "~1.2.0",
     "gulp-csso": "~0.2.9"
+  },
+  "devDependencies": {
+    "marked": "^0.3.2"
   }
 }

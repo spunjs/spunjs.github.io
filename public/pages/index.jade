@@ -18,11 +18,10 @@ block append body:content
         span.command. get
         span.string-arg. "http://google.com"
       .line
-        span.command. find
-        span.string-arg. "[name=q]"
-      .line
         span.command. type
         span.string-arg. "spun authoring"
+        span.operator. in
+        span.string-arg. "[name=q]"
       .line
         span.command. submit
       .line
@@ -36,37 +35,63 @@ block append body:content
       .line
         span.command. quit
 
+    //
+      p.
+        Spun's goal is to make writing selenium specs easy and intuitive.
+        Anyone in your organization can learn to write spun specs.  If
+        you've viewed the example above then you almost know enough to
+        figure the rest out.
+
+    :markdown
+      ## Installing
+      Spun runs on [node.js](http://nodejs.org).  Once you have node
+      installed run this:
+
+    .spun-example
+      .line
+        span.command. npm install -g spun
+
     p.
-      Spun's goal is to make writing selenium specs easy and intuitive.
-      Anyone in your organization can learn to write spun specs.  If
-      you've viewed the example above then you almost know enough to
-      figure the rest out.
+      Once you do that you're good to go!  Here's an example on how you can run it:
 
-    h3. Universal
-    p.
-      One of Selenium's downfalls is the number of bindings out
-      there for various programming languages.  Not only are there bindings
-      for several languages, there are multiple variations of each binding
-      for different coding preferences.  This makes it harder for larger
-      groups of developers and QA to agree on a solution.
+    .spun-example
+      .line
+        span.command. spun -h
+        span.string-arg. #for help
+      .line
+        span.string-arg. #run all your spun files in test
+      .line
+        span.command. spun ./test/**/*.spun
+      .line
+        span.string-arg. #run all your spun files in the given browsers
+      .line
+        span.command. spun --browsers=chrome,ff,ie,safari ./test/**/*.spun
 
-      spun is a universal selenium DSL (Domain Specific Language) that
-      compiles down to any programming language of choice.  Spun utilizes
-      provider modules that handle outputting actual code.  Because of this
-      you can run compiled spun files in any language of choice so long as
-      there is a provider written to do the compilation.
+    //h3. Universal
+      p.
+        One of Selenium's downfalls is the number of bindings out
+        there for various programming languages.  Not only are there bindings
+        for several languages, there are multiple variations of each binding
+        for different coding preferences.  This makes it harder for larger
+        groups of developers and QA to agree on a solution.
 
-    h3. Intuitive
-    p.
-      Spun favors declaration over imperative programming.  This makes it
-      easier to learn and understand for anyone with a non-technical
-      background.
+        spun is a universal selenium DSL (Domain Specific Language) that
+        compiles down to any programming language of choice.  Spun utilizes
+        provider modules that handle outputting actual code.  Because of this
+        you can run compiled spun files in any language of choice so long as
+        there is a provider written to do the compilation.
 
-      Spun understands the commands you need to verify that your site is
-      working correctly.
+      h3. Intuitive
+      p.
+        Spun favors declaration over imperative programming.  This makes it
+        easier to learn and understand for anyone with a non-technical
+        background.
 
-    h3. Maintainable
-    p.
-      The traditional approach to maintaining large selenium projects is
-      to create page objects.  Page objects add complication, and prevent
-      non-technical people from authoring specs.
+        Spun understands the commands you need to verify that your site is
+        working correctly.
+
+      h3. Maintainable
+      p.
+        The traditional approach to maintaining large selenium projects is
+        to create page objects.  Page objects add complication, and prevent
+        non-technical people from authoring specs.

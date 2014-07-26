@@ -1,24 +1,36 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>spun - Rapid Selenium Spec Authoring</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/stylesheets/main.css"></head><body><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-36027688-3', 'auto');ga('send', 'pageview');</script><div class="centered-text"><img src="/images/logo.png" alt="spun for rapid selenium spec authoring" class="logo"><h1>Rapid Selenium Spec Authoring</h1><div class="spun-example"><div class="line"><span class="command">get</span><span class="string-arg">"http://google.com"</span></div><div class="line"><span class="command">find</span><span class="string-arg">"[name=q]"</span></div><div class="line"><span class="command">type</span><span class="string-arg">"spun authoring"</span></div><div class="line"><span class="command">submit</span></div><div class="line"><span class="command">find</span><span class="string-arg">"#search li h3"</span></div><div class="line"><span class="command">assert</span><span class="string-arg">"spun"</span><span class="operator">&nbsp;in</span><span class="string-arg">text</span></div><div class="line"><span class="command">quit</span></div></div><p>Spun's goal is to make writing selenium specs easy and intuitive.
-Anyone in your organization can learn to write spun specs.  If
-you've viewed the example above then you almost know enough to
-figure the rest out.
-</p><h3>Universal</h3><p>One of Selenium's downfalls is the number of bindings out
-there for various programming languages.  Not only are there bindings
-for several languages, there are multiple variations of each binding
-for different coding preferences.  This makes it harder for larger
-groups of developers and QA to agree on a solution.
-
-spun is a universal selenium DSL (Domain Specific Language) that
-compiles down to any programming language of choice.  Spun utilizes
-provider modules that handle outputting actual code.  Because of this
-you can run compiled spun files in any language of choice so long as
-there is a provider written to do the compilation.
-</p><h3>Intuitive</h3><p>Spun favors declaration over imperative programming.  This makes it
-easier to learn and understand for anyone with a non-technical
-background.
-
-Spun understands the commands you need to verify that your site is
-working correctly.
-</p><h3>Maintainable</h3><p>The traditional approach to maintaining large selenium projects is
-to create page objects.  Page objects add complication, and prevent
-non-technical people from authoring specs.</p></div></body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>spun - Rapid Selenium Spec Authoring</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="/stylesheets/main.css"></head><body><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-36027688-3', 'auto');ga('send', 'pageview');</script><div class="centered-text"><img src="/images/logo.png" alt="spun for rapid selenium spec authoring" class="logo"><h1>Rapid Selenium Spec Authoring</h1><div class="spun-example"><div class="line"><span class="command">get</span><span class="string-arg">"http://google.com"</span></div><div class="line"><span class="command">type</span><span class="string-arg">"spun authoring"</span><span class="operator">in</span><span class="string-arg">"[name=q]"</span></div><div class="line"><span class="command">submit</span></div><div class="line"><span class="command">find</span><span class="string-arg">"#search li h3"</span></div><div class="line"><span class="command">assert</span><span class="string-arg">"spun"</span><span class="operator">&nbsp;in</span><span class="string-arg">text</span></div><div class="line"><span class="command">quit</span></div></div><!--p.
+  Spun's goal is to make writing selenium specs easy and intuitive.
+  Anyone in your organization can learn to write spun specs.  If
+  you've viewed the example above then you almost know enough to
+  figure the rest out.
+  --><h2 id="installing">Installing</h2>
+<p>Spun runs on <a href="http://nodejs.org">node.js</a>.  Once you have node
+installed run this:</p>
+<div class="spun-example"><div class="line"><span class="command">npm install -g spun</span></div></div><p>Once you do that you're good to go!  Here's an example on how you can run it:
+</p><div class="spun-example"><div class="line"><span class="command">spun -h</span><span class="string-arg">#for help</span></div><div class="line"><span class="string-arg">#run all your spun files in test</span></div><div class="line"><span class="command">spun ./test/**/*.spun</span></div><div class="line"><span class="string-arg">#run all your spun files in the given browsers</span></div><div class="line"><span class="command">spun --browsers=chrome,ff,ie,safari ./test/**/*.spun</span></div></div><!--h3. Universalp.
+  One of Selenium's downfalls is the number of bindings out
+  there for various programming languages.  Not only are there bindings
+  for several languages, there are multiple variations of each binding
+  for different coding preferences.  This makes it harder for larger
+  groups of developers and QA to agree on a solution.
+  
+  spun is a universal selenium DSL (Domain Specific Language) that
+  compiles down to any programming language of choice.  Spun utilizes
+  provider modules that handle outputting actual code.  Because of this
+  you can run compiled spun files in any language of choice so long as
+  there is a provider written to do the compilation.
+  
+h3. Intuitive
+p.
+  Spun favors declaration over imperative programming.  This makes it
+  easier to learn and understand for anyone with a non-technical
+  background.
+  
+  Spun understands the commands you need to verify that your site is
+  working correctly.
+  
+h3. Maintainable
+p.
+  The traditional approach to maintaining large selenium projects is
+  to create page objects.  Page objects add complication, and prevent
+  non-technical people from authoring specs.--></div></body></html>
